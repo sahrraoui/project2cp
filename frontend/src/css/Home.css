@@ -1,0 +1,688 @@
+/* Home.css - Scoped for Firstpart and Secondpart only */
+
+.firstpart-container,
+.secondpart-container {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.firstpart-container .contaa {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #EAE2E2;
+    position: relative;
+    z-index: 1;
+}
+
+.firstpart-container .firir {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 64px); /* Subtract navbar height */
+    margin-top: 64px; /* Add margin for navbar */
+}
+
+.firstpart-container #bibi {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 840px;
+    z-index: 0;
+    object-fit: cover;
+}
+
+.firstpart-container .paa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    height: auto;
+    min-height: 35vh;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+    font-size: 1.5rem;
+    left: 2%;
+    padding: 2rem 0;
+}
+
+.firstpart-container .paa h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.firstpart-container .paa h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+ /* Move the p up, if needed */
+
+.firstpart-container .paa p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+.firstpart-container #pho {
+    width: 14%;
+    height: 25%;
+    position: relative;
+    animation: taa 2s ease-in-out infinite alternate;
+    z-index: 1;
+    left: 2%;
+    margin: 0 auto;
+    margin-top: 2%;
+    display: block;
+    object-fit: contain;
+}
+
+@keyframes taa {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.firstpart-container .seco {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    gap: 25px;
+    font-weight: 800;
+    font-size: 1.25rem;
+}
+
+.firstpart-container .seco video {
+    width: 100%;
+    height: 100%;
+}
+
+.firstpart-container .hoo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: transparent;
+    text-align: center;
+    gap: 2rem;
+}
+
+.secondpart-container .abouu {
+    margin-top: 20%;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background-color: #EAE2E2;
+    text-align: center;
+}
+
+.secondpart-container #hh {
+    position: relative;
+    top: 0;
+    left: 5.5%;
+    width: 100%;
+    max-width: 1000px;
+    margin-bottom: 40px;
+    font-size: larger;
+    font-weight: 800;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.secondpart-container .wide_selection,
+.secondpart-container .secure_payements,
+.secondpart-container .easy_booking,
+.secondpart-container .best_prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+    padding: 2.5rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 2s ease-out;
+}
+
+.secondpart-container .wide_selection.animate,
+.secondpart-container .secure_payements.animate,
+.secondpart-container .easy_booking.animate,
+.secondpart-container .best_prices.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.secondpart-container .secure_payements,
+.secondpart-container .best_prices {
+    transform: translateX(100%);
+}
+
+.secondpart-container .lee,
+.secondpart-container .rii {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    padding: 0 2.5rem;
+    text-align: center;
+}
+
+.secondpart-container .lee h1,
+.secondpart-container .rii h1 {
+    font-size: 2.125rem;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 10px;
+    margin: 0 2rem;
+    width: 100%;
+    color: #E61E51;
+}
+
+.secondpart-container .lee p,
+.secondpart-container .rii p {
+    top: 20px;
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0 2rem;
+    width: 100%;
+    color: #111;
+}
+
+.secondpart-container .lee img,
+.secondpart-container .rii img {
+    max-width: 280px;
+}
+
+.secondpart-container .lee {
+    text-align: right;
+}
+
+.secondpart-container .wide_selection {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.secondpart-container .lee {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.secondpart-container .easy_booking {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.secondpart-container .secure_payements .rii {
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.secondpart-container .abouu h1 {
+    background-color: #E61E51;
+    padding: 20px;
+    padding-block: 5px;
+    border-radius: 15px;
+    color: aliceblue;
+    font-size: 1rem;
+    padding-inline: 5px;
+}
+
+.secondpart-container .laaa {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+    border-top: 1px solid #474747;
+    background-color: #D9D9D9;
+    padding-bottom: 4%;
+}
+
+.secondpart-container .gauu {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.secondpart-container .gauu h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+.secondpart-container .gauu p {
+    font-size: 16px;
+    color: #666;
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+.secondpart-container .droii {
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+}
+
+.secondpart-container .droii a:first-child {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    cursor: no-drop;
+    margin-bottom: 15px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.secondpart-container .droii a:not(:first-child) {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+
+.secondpart-container .droii a:last-child {
+    margin-bottom: 50px;
+}
+
+.secondpart-container .droii a:not(:first-child):hover {
+    transform: scale(1.1);
+}
+
+.secondpart-container .wide_selection::before,
+.secondpart-container .secure_payements::before,
+.secondpart-container .easy_booking::before,
+.secondpart-container .best_prices::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 80%;
+    background-color: #E61E51;
+    z-index: 1;
+}
+
+.secondpart-container .wide_selection::after,
+.secondpart-container .secure_payements::after,
+.secondpart-container .easy_booking::after,
+.secondpart-container .best_prices::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background-color: #E61E51;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.secondpart-container .raa {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.secondpart-container .raa > * {
+    flex: 1 1 calc(33.333% - 2rem);
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.secondpart-container .raa > * {
+    flex: 1 1 calc(33.333% - 1.5rem);
+    min-width: 280px;
+    max-width: 380px;
+}
+
+.secondpart-container .raa > * {
+    flex: 1 1 calc(50% - 1.2rem);
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.secondpart-container .raa > * {
+    flex: 1 1 calc(50% - 1rem);
+    min-width: 220px;
+    max-width: 320px;
+}
+
+.secondpart-container .raa > * {
+    flex: 1 1 100%;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+/* Tablet and smaller screens */
+@media (min-width: 500px) {
+    .firstpart-container .firir {
+        height: 90vh;
+        max-width: 100%;
+    }
+
+    .firstpart-container #bibi {
+        max-height: 80%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .firstpart-container .paa {
+        min-height: 60vh;
+        padding: 1.5rem 0;
+    }
+
+    .firstpart-container .paa h1 {
+        font-size: 2rem;
+    }
+
+    .firstpart-container .paa h3 {
+        font-size: 1.3rem;
+    }
+
+    .firstpart-container .paa p {
+        font-size: 1.1rem;
+    }
+
+    .firstpart-container #pho {
+        width: 20%;
+        margin-top: -15%;
+        height: auto;
+    }
+
+    .firstpart-container .seco {
+        padding: 30px 15px;
+    }
+
+    .firstpart-container .hoo {
+        padding: 2rem 1rem;
+        gap: 1.2rem;
+    }
+}
+
+/* Mobile devices */
+@media (min-width: 1000px) {
+    .firstpart-container .firir {
+        height: 100%;
+        min-height: 110vh;
+    }
+
+    .firstpart-container #bibi {
+        max-height: 650px;
+        min-height: 80vh;
+    }
+
+    .firstpart-container .paa {
+        min-height: 80vh;
+        padding: 1.5rem 0;
+        z-index: 1000;
+    }
+
+    .firstpart-container .paa h1 {
+        font-size: 1.9rem;
+        margin-top: -10%;
+    }
+
+    .firstpart-container .paa h3 {
+        font-size: 1.5rem;
+    }
+
+    .firstpart-container .paa p {
+        font-size: 1.3rem;
+    }
+
+    .firstpart-container #pho {
+        width: 15%;
+        margin-top: -20%;
+        height: auto;
+    }
+
+    .firstpart-container .seco {
+        padding: 30px 15px;
+    }
+
+    .firstpart-container .hoo {
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .firstpart-container .firir {
+        width: 100%;
+        min-height: 10vh;
+        max-height: 50vh;
+    }
+
+    .firstpart-container #bibi {
+        margin-top: -5%;
+        padding-top: 23%;
+        padding-bottom: 10%;
+        padding-left: 0%;
+        padding-right: 0%;
+        margin-bottom: 10%;
+        max-height: 100%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .firstpart-container .paa {
+        min-height: 60vh;
+        padding: 1rem 0;
+        margin-top: -15%;
+        padding-left: 10%;
+        margin-left: 0%;
+    }
+
+    .firstpart-container .paa h1 {
+        font-size: 0.8rem;
+        margin-left: -5%;
+    }
+
+    .firstpart-container .paa h3 {
+        font-size: 0.7rem;
+    }
+
+    .firstpart-container .paa p {
+        font-size: 0.5rem;
+    }
+
+    .firstpart-container #pho {
+        width: 20%;
+        margin-top: -50%;
+        height: auto;
+    }
+
+    .secondpart-container .wide_selection,
+    .secondpart-container .secure_payements,
+    .secondpart-container .easy_booking,
+    .secondpart-container .best_prices {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4rem;
+        position: relative;
+        padding: 2.5rem;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 2s ease-out;
+    }
+
+    .secondpart-container .wide_selection.animate,
+    .secondpart-container .secure_payements.animate,
+    .secondpart-container .easy_booking.animate,
+    .secondpart-container .best_prices.animate {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .secondpart-container .secure_payements,
+    .secondpart-container .best_prices {
+        transform: translateX(100%);
+    }
+
+    .secondpart-container .lee,
+    .secondpart-container .rii {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 3;
+        padding: 0 2.5rem;
+        text-align: center;
+    }
+
+    .secondpart-container .lee h1,
+    .secondpart-container .rii h1 {
+        font-size: 0.8rem;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 10px;
+        width: 100%;
+        color: #E61E51;
+    }
+
+    .secondpart-container .lee p,
+    .secondpart-container .rii p {
+        top: 20px;
+        font-size: 0.6rem;
+        text-align: center;
+        margin: 0 1rem;
+        width: 100%;
+        color: #E61E51;
+    }
+
+    .secondpart-container .lee img,
+    .secondpart-container .rii img {
+        max-width: 100px;
+    }
+
+    .secondpart-container .lee {
+        text-align: right;
+    }
+
+    .secondpart-container .wide_selection {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .secondpart-container .lee {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .secondpart-container .easy_booking {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .secondpart-container .secure_payements .rii {
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+
+    .secondpart-container .abouu h1 {
+        background-color: #E61E51;
+        padding-block: 5px;
+        border-radius: 8px;
+        color: aliceblue;
+        font-size: 0.7rem;
+        padding-inline: 3px;
+    }
+
+    .firstpart-container .seco {
+        margin-top: 0%;
+    }
+
+    .firstpart-container .hoo {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+.secondpart-container {
+    background-color: #EAE2E2;
+}
+

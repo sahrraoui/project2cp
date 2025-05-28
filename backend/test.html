@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Create Hotel</title>
+</head>
+<body>
+  <h2>Create a Hotel</h2>
+
+  <form id="hotelForm" enctype="multipart/form-data" method="POST" action="http://localhost:5000/api/v1/hotels">
+    <label>
+      Name:
+      <input type="text" name="name" required />
+    </label><br /><br />
+
+    <label>
+      Wilaya:
+      <select name="wilaya" required id="wilayaSelect"></select>
+    </label><br /><br />
+
+    <label>
+      Address:
+      <input type="text" name="address" required />
+    </label><br /><br />
+
+    <label>
+      Description:
+      <textarea name="description" maxlength="2000"></textarea>
+    </label><br /><br />
+
+    <label>
+      Amenities (comma-separated):
+      <input type="text" name="amenities" />
+    </label><br /><br />
+
+    <label>
+      Price Per Night:
+      <input type="number" name="pricePerNight" required />
+    </label><br /><br />
+
+    <label>
+      Rooms Available:
+      <input type="number" name="roomsAvailable" value="1" />
+    </label><br /><br />
+
+    <label>
+      Images (multiple URLs, comma-separated):
+      <input type="text" name="images" />
+    </label><br /><br />
+
+    <button type="submit">Create Hotel</button>
+  </form>
+
+  <script>
+    // Populate Wilaya dropdown
+    const wilayat = [
+      "Adrar", "Chlef", "Laghouat", "Oum El Bouaghi", "Batna", "Béjaïa",
+      "Biskra", "Béchar", "Blida", "Bouira", "Tamanrasset", "Tébessa",
+      "Tlemcen", "Tiaret", "Tizi Ouzou", "Algiers", "Djelfa", "Jijel",
+      "Sétif", "Saïda", "Skikda", "Sidi Bel Abbès", "Annaba", "Guelma",
+      "Constantine", "Médéa", "Mostaganem", "M'Sila", "Mascara", "Ouargla",
+      "Oran", "El Bayadh", "Illizi", "Bordj Bou Arréridj", "Boumerdès",
+      "El Tarf", "Tindouf", "Tissemsilt", "El Oued", "Khenchela",
+      "Souk Ahras", "Tipaza", "Mila", "Aïn Defla", "Naâma", "Aïn Témouchent",
+      "Ghardaïa", "Relizane", "Timimoun", "Bordj Badji Mokhtar",
+      "Ouled Djellal", "Béni Abbès", "In Salah", "In Guezzam", "Touggourt",
+      "Djanet", "El M'Ghair", "El Menia", "Tamanrasset", "Bordj Badji Mokhtar"
+    ];
+
+    const select = document.getElementById("wilayaSelect");
+    wilayat.forEach(w => {
+      const option = document.createElement("option");
+      option.value = w;
+      option.textContent = w;
+      select.appendChild(option);
+    });
+  </script>
+</body>
+</html>

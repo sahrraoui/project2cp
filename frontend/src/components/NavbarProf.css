@@ -1,0 +1,446 @@
+body {
+  overflow-x: hidden;
+}
+
+.navbar-prof {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #ece6e6;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  height: 80px;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 3vw;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-links a:hover {
+  color: #dc2626;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+/* Notification */
+.navbar-notification {
+  position: relative;
+}
+
+.notif-btn {
+  background: none;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+}
+
+.notif-icon {
+  font-size: 1.7rem;
+  color: #222;
+}
+
+.notif-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #dc2626;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 18px;
+  text-align: center;
+  border: 2px solid #ece6e6;
+}
+
+.notif-dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: #f3f3f3;
+  min-width: 260px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-radius: 16px;
+  z-index: 10;
+  padding: 16px 0 8px 0;
+  animation: fadeIn 0.2s;
+}
+
+.notif-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0 20px 8px 20px;
+  color: #222;
+}
+
+.notif-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.notif-dropdown li {
+  padding: 8px 0;
+  color: #222;
+  font-size: 1rem;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.notif-dropdown li:last-child {
+  border-bottom: none;
+}
+
+/* Profile */
+.navbar-profile {
+  position: relative;
+}
+
+.profile-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ece6e6;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 2em;
+  padding: 8px 18px 8px 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  transition: border 0.2s;
+}
+
+.profile-btn:hover {
+  border: 1.5px solid #dc2626;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #111;
+}
+
+.profile-icon {
+  font-size: 2rem;
+  color: #bdbdbd;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: #e0e0e0;
+  min-width: 260px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border-radius: 18px;
+  z-index: 20;
+  padding: 12px 0;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateY(0) !important;
+  display: block !important;
+  overflow-y: auto;
+  max-height: 300px;
+  scrollbar-width: none; /* Firefox */
+  top: 80px; /* Position below the navbar */
+}
+
+.profile-dropdown.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.profile-dropdown::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0;
+}
+
+.profile-dropdown li {
+  padding: 16px 28px;
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.profile-dropdown li:hover {
+  background: #f3f3f3;
+}
+
+.profile-dropdown .divider {
+  border-bottom: 2px solid #222;
+  margin: 0 18px;
+  padding: 0;
+}
+
+.profile-dropdown .logout {
+  color: #dc2626;
+  font-weight: 700;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #222;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.navbar-mobile-overlay {
+  display: none;
+}
+
+.nav-icon {
+  font-size: 1.1em;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.notif-label {
+  margin-left: 10px;
+  font-size: 1.05em;
+  font-weight: 500;
+  color: #111;
+}
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .hide-on-mobile, .desktop-only {
+    display: none !important;
+  }
+  .show-on-mobile {
+    display: block !important;
+  }
+  .navbar-hamburger {
+    display: block;
+    z-index: 102;
+  }
+  .mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.12);
+    z-index: 200;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+  .mobile-menu-list {
+    background: #ece6e6;
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0 0 0;
+    box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+    animation: fadeIn 0.3s;
+    gap: 0.5rem;
+  }
+  .mobile-menu-list a, .mobile-menu-list button {
+    width: 90%;
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: none;
+    border: none;
+    color: #111;
+    padding: 12px 18px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  .mobile-menu-list a:hover, .mobile-menu-list button:hover {
+    background: #f3f3f3;
+  }
+  .mobile-menu-list .nav-icon, .mobile-menu-list .notif-icon, .mobile-menu-list .profile-icon {
+    margin-right: 16px;
+    font-size: 1.3em;
+  }
+  .mobile-menu-list .notif-badge {
+    margin-left: 8px;
+  }
+  .profile-dropdown {
+    display: block !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+  }
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .navbar-prof {
+    padding: 0 1vw;
+    height: 60px;
+  }
+  .navbar-logo {
+    font-size: 1.2rem;
+  }
+  .profile-btn {
+    padding: 6px 10px;
+    font-size: 0.95rem;
+  }
+  .profile-icon {
+    font-size: 1.3rem;
+  }
+  .notif-icon {
+    font-size: 1.3rem;
+  }
+  .notif-dropdown, .profile-dropdown {
+    min-width: 180px;
+    right: 0;
+    left: auto;
+    font-size: 0.95rem;
+  }
+}
+
+.compact-icons {
+  justify-content: center !important;
+  align-items: center !important;
+}
+.compact-icons a {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+@media (max-width: 500px) {
+  .navbar-prof {
+    padding: 0 1vw;
+    height: 60px;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .navbar-links {
+    min-width: 0;
+    max-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
+    padding: 80px 0 0 0;
+  }
+  .navbar-links a {
+    font-size: 1.7rem !important;
+    padding: 0 10px !important;
+    border: none !important;
+    color: #111 !important;
+    background: none !important;
+    min-width: unset !important;
+    text-align: right !important;
+  }
+  .navbar-links .nav-icon {
+    margin: 0 !important;
+  }
+  .navbar-links .mobile-actions {
+    display: none !important;
+  }
+  .navbar-mobile-overlay {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 414px) {
+  *{
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .navbar-prof {
+    padding: 0 1vw;
+    height: 56px;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .navbar-logo {
+    font-size: 1.1rem;
+  }
+  .navbar-links {
+    min-width: 0;
+    max-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
+    padding: 70px 0 0 0;
+    gap: 0.5rem;
+  }
+  .navbar-links a {
+    font-size: 1.1rem !important;
+    padding: 14px 0 !important;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .navbar-mobile-overlay {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+  }
+  .profile-btn, .notif-btn {
+    font-size: 1rem;
+    padding: 6px 8px;
+  }
+  .profile-icon, .notif-icon {
+    font-size: 1.1rem;
+  }
+} 

@@ -1,0 +1,139 @@
+.reservation-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.reservation-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+.amenities-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.amenities-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    color: #666;
+}
+
+.amenities-list li:last-child {
+    border-bottom: none;
+}
+
+.date-selector {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.date-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-input label {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.date-input input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.guest-selector {
+    margin-bottom: 20px;
+}
+
+.guest-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.guest-options {
+    margin-top: 8px;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+.guest-option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.guest-option:last-child {
+    margin-bottom: 0;
+}
+
+.guest-counter {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.guest-counter button {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.guest-counter button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.guest-counter button:hover:not(:disabled) {
+    border-color: #e63956;
+    color: #e63956;
+}
+
+.guest-counter span {
+    min-width: 20px;
+    text-align: center;
+}
+
+.reserve-button {
+    width: 100%;
+    padding: 12px;
+    background: #e63956;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.reserve-button:hover {
+    background: #d62d4c;
+} 
